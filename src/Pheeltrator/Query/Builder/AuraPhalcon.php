@@ -66,7 +66,8 @@ class AuraPhalcon implements BuilderInterface
     public function select($columns)
     {
         $this->select->resetCols();
-        $this->select->cols((array)$columns);
+        $columns = array_values((array)$columns);
+        $this->select->cols($columns);
         return $this;
     }
     
