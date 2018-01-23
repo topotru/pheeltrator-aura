@@ -1,0 +1,28 @@
+{
+  "name": "topotru/pheeltrator-aura",
+  "description": "pheeltrator-aura",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "topot",
+      "email": "topotru@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "TopoTrue\\Pheeltrator\\": "src/Pheeltrator/"
+    }
+  },
+  "require": {
+    "php": ">=7.1.0",
+    "aura/sqlquery": "~2.7",
+    "topotru/pheeltrator": "dev-next"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/topotru/pheeltrator"
+    }
+  ]
+}
