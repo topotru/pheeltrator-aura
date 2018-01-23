@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "237c109b149c7c9487266dd2996b21c3",
+    "content-hash": "447cf86b776bfa8d88de5d2794944082",
     "packages": [
         {
             "name": "aura/sqlquery",
@@ -76,7 +76,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/topotru/pheeltrator",
-                "reference": "ecbc12b0d2141050f013e846f6153e9c3b369157"
+                "reference": "bd986229a918dd53c4f0a645d6ba04e662299f95"
             },
             "type": "library",
             "autoload": {
@@ -94,10 +94,59 @@
                 }
             ],
             "description": "pheeltrator",
-            "time": "2017-09-15T15:11:01+00:00"
+            "time": "2018-01-23T16:58:08+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "phalcon/ide-stubs",
+            "version": "v3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phalcon/ide-stubs.git",
+                "reference": "e22d3f2c8b1e60a206a88d5dda07ec3e34dece3b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phalcon/ide-stubs/zipball/e22d3f2c8b1e60a206a88d5dda07ec3e34dece3b",
+                "reference": "e22d3f2c8b1e60a206a88d5dda07ec3e34dece3b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Phalcon Team",
+                    "email": "team@phalconphp.com",
+                    "homepage": "https://phalconphp.com/en/team"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/phalcon/ide-stubs/graphs/contributors"
+                }
+            ],
+            "description": "The most complete Phalcon Framework IDE stubs library which enables autocompletion in modern IDEs.",
+            "homepage": "https://phalconphp.com",
+            "keywords": [
+                "Devtools",
+                "Eclipse",
+                "autocomplete",
+                "ide",
+                "netbeans",
+                "phalcon",
+                "phpstorm",
+                "stub",
+                "stubs"
+            ],
+            "time": "2017-12-25T15:12:50+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
@@ -106,7 +155,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.1.0"
+        "php": ">=7.1.0",
+        "ext-phalcon": "^3.2"
     },
     "platform-dev": []
 }
