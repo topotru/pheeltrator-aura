@@ -14,10 +14,10 @@ use Phalcon\Db\AdapterInterface;
 
 
 /**
- * Class Builder
- * @package TopoTrue\Pheeltrator\Query\Builder
+ * Class AuraPhalcon
+ * @package TopoTrue\Pheeltrator\Query\AuraPhalcon
  */
-class Builder implements BuilderInterface
+class AuraPhalcon implements BuilderInterface
 {
     /**
      * @var QueryFactory
@@ -45,7 +45,7 @@ class Builder implements BuilderInterface
     protected $types = [];
     
     /**
-     * Builder constructor.
+     * AuraPhalcon constructor.
      * @param AdapterInterface $db
      */
     public function __construct(AdapterInterface $db)
