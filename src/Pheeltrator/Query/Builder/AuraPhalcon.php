@@ -172,8 +172,8 @@ class AuraPhalcon implements BuilderInterface
         if ($numRows > 1 || $hasAggrHaving) {
             $cnt = $numRows;
         } else {
-            //$res->setFetchMode(\PDO::FETCH_ASSOC);
-            $row = $res[0];
+            $res->setFetchMode(\PDO::FETCH_ASSOC);
+            $row = $res->fetch();
             $cnt = $row['count'];
         }
         return $cnt;
