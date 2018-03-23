@@ -11,6 +11,7 @@ namespace TopoTrue\Pheeltrator\Query\Builder;
 use Aura\SqlQuery\Common\Select;
 use Aura\SqlQuery\QueryFactory;
 use Phalcon\Db\AdapterInterface;
+use TopoTrue\Pheeltrator\Query\Source\Join;
 
 
 /**
@@ -43,6 +44,11 @@ class AuraPhalcon implements BuilderInterface
      * @var array
      */
     protected $types = [];
+    
+    /**
+     * @var array
+     */
+    protected $having = [];
     
     /**
      * AuraPhalcon constructor.
@@ -90,9 +96,9 @@ class AuraPhalcon implements BuilderInterface
      * @param string|null $type
      * @return BuilderInterface
      */
-    public function join($from, $source, $conditions = null, $alias = null, $type = 'LEFT')
+    public function join($from, $source, $conditions = null, $alias = null, $type = null)
     {
-        $this->select->join($type, $source.($alias ? " AS {$alias}" : ''), $conditions);
+        $this->select->join($type ?: Join::LEFT, $source.($alias ? " AS {$alias}" : ''), $conditions);
         return $this;
     }
     
@@ -131,6 +137,7 @@ class AuraPhalcon implements BuilderInterface
         if (is_array($bindTypes) && $bindTypes) {
             $this->types = array_merge($this->types, $bindTypes);
         }
+        $this->having[] = $cond;
         return $this;
     }
     
@@ -155,8 +162,21 @@ class AuraPhalcon implements BuilderInterface
     public function count($field = '*')
     {
         $this->select(["COUNT({$field}) as count"]);
-        $res = $this->db->fetchOne($this->select->getStatement(), \PDO::FETCH_ASSOC, $this->select->getBindValues());
-        return (int)$res['count'];
+    
+        $res     = $this->db->query($this->select->getStatement(), $this->select->getBindValues());
+        $numRows = $res->numRows();
+    
+        $hasAggrHaving = array_filter($this->having, function ($item) {
+            return preg_match('/(count|sum|avg|max|min)/i', $item);
+        });
+        if ($numRows > 1 || $hasAggrHaving) {
+            $cnt = $numRows;
+        } else {
+            //$res->setFetchMode(\PDO::FETCH_ASSOC);
+            $row = $res[0];
+            $cnt = $row['count'];
+        }
+        return $cnt;
     }
     
     /**
