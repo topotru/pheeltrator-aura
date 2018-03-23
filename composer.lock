@@ -76,7 +76,10 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/topotru/pheeltrator",
-                "reference": "bd986229a918dd53c4f0a645d6ba04e662299f95"
+              "reference": "401b8fa2da2ceff4227c36f717c5d2ceab681d05"
+            },
+          "require": {
+            "php": ">=7.0.0"
             },
             "type": "library",
             "autoload": {
@@ -94,22 +97,22 @@
                 }
             ],
             "description": "pheeltrator",
-            "time": "2018-01-23T16:58:08+00:00"
+          "time": "2018-03-23T21:19:03+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "phalcon/ide-stubs",
-            "version": "v3.3.0",
+          "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phalcon/ide-stubs.git",
-                "reference": "e22d3f2c8b1e60a206a88d5dda07ec3e34dece3b"
+              "reference": "fed301b552dd12d9428d0cc9dbae45d58ce42e56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phalcon/ide-stubs/zipball/e22d3f2c8b1e60a206a88d5dda07ec3e34dece3b",
-                "reference": "e22d3f2c8b1e60a206a88d5dda07ec3e34dece3b",
+              "url": "https://api.github.com/repos/phalcon/ide-stubs/zipball/fed301b552dd12d9428d0cc9dbae45d58ce42e56",
+              "reference": "fed301b552dd12d9428d0cc9dbae45d58ce42e56",
                 "shasum": ""
             },
             "require": {
@@ -144,7 +147,7 @@
                 "stub",
                 "stubs"
             ],
-            "time": "2017-12-25T15:12:50+00:00"
+          "time": "2018-02-26T23:55:17+00:00"
         }
     ],
     "aliases": [],
