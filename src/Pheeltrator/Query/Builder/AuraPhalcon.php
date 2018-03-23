@@ -40,8 +40,8 @@ class AuraPhalcon extends AuraBuilder
      */
     public function doExecute(string $statement, array $binds = [], array $types = [])
     {
-        $res = $this->db->query($this->select->getStatement(), $this->select->getBindValues());
-    
+        $res = $this->db->query($statement, $binds, $types);
+        
         $res->setFetchMode(\PDO::FETCH_ASSOC);
     
         return $res->fetchAll();
