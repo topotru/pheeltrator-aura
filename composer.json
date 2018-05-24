@@ -18,7 +18,7 @@
     "php": ">=7.1.0",
     "ext-phalcon": "^3.2",
     "aura/sqlquery": "~2.7",
-    "topotru/pheeltrator": "dev-next"
+    "topotru/pheeltrator": "dev-rc"
   },
   "require-dev": {
     "phalcon/ide-stubs": "^3.2"
