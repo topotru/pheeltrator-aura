@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f3a820ac364c32e6b66227851400a6e",
+    "content-hash": "5779e02df8a02deb2d5cc0aa4152af9f",
     "packages": [
         {
             "name": "aura/sqlquery",
@@ -103,16 +103,16 @@
     "packages-dev": [
         {
             "name": "phalcon/ide-stubs",
-            "version": "v3.3.2",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phalcon/ide-stubs.git",
-                "reference": "fed301b552dd12d9428d0cc9dbae45d58ce42e56"
+                "reference": "af75e05f8cdcda31ee45145dbd918b8a75ffcce4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phalcon/ide-stubs/zipball/fed301b552dd12d9428d0cc9dbae45d58ce42e56",
-                "reference": "fed301b552dd12d9428d0cc9dbae45d58ce42e56",
+                "url": "https://api.github.com/repos/phalcon/ide-stubs/zipball/af75e05f8cdcda31ee45145dbd918b8a75ffcce4",
+                "reference": "af75e05f8cdcda31ee45145dbd918b8a75ffcce4",
                 "shasum": ""
             },
             "require": {
@@ -147,7 +147,7 @@
                 "stub",
                 "stubs"
             ],
-            "time": "2018-02-26T23:55:17+00:00"
+            "time": "2018-05-28T06:20:06+00:00"
         }
     ],
     "aliases": [],
